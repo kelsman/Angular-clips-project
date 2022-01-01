@@ -32,7 +32,7 @@
       *ngFor="let clip of clips"
     >
       <!-- Image -->
-      <a href="#">
+      <a [routerLink]="['', 'clip', clip.docID]">
         <img
           class="card-img-top rounded-tl-2xl w-full"
           [src]="clip?.screenshotURL"
@@ -70,7 +70,6 @@
           <span class="material-icons text-base">build</span>
         </a>
         <a
-          href="#"
           (click)="delete($event, clip)"
           class="flex-1 p-2 rounded-br-2xl transition hover:text-indigo-400"
         >
